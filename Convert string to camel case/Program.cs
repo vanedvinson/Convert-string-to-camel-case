@@ -12,13 +12,24 @@ namespace Convert_string_to_camel_case
         static void Main(string[] args)
         {
             Console.WriteLine(ToCamelCase("the_stealth_warrior"));
-            //Console.WriteLine(ToCamelCase("The-Stealth-Warrior"));
+            Console.WriteLine(ToCamelCase("The-Stealth-Warrior"));
+            Console.WriteLine(ToCamelCase("vvjoarmiagMrtfxdsdqu-hpotsdgpnw"));
+            Console.WriteLine(ToCamelCase("dsflisdjfldksjf_ousdkjshfkjdshfkjhd"));
 
 
             string ToCamelCase(string str)
             {
-                //Taking the string, splitting it a puting it into an array
-                string[] words = str.Split('_');
+                string[] words ;
+                //Taking the string, using a conditon and splitting it a puting it into an array
+                /*if (str.Contains('_'))
+                {
+                    words = str.Split('_');
+                }
+                else
+                {
+                    words = str.Split('-');
+                }*/
+                _ = str.Contains('-') ? words = str.Split('-') : words = str.Split('_');
                 string s = words[0];
 
                 //krenuvsi od drugog elementa u nizu radim capitalize
